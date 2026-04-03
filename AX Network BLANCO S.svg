@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-3.078892)">
+        <g transform="matrix(0.334848,0,0,0.334848,3.392359,69.215585)">
+            <text x="32.444px" y="47.161px" style="font-family:'Orbitron-Regular', 'Orbitron';font-size:49.833px;fill:white;">AX</text>
+            <text x="128.415px" y="47.161px" style="font-family:'Orbitron-Black', 'Orbitron';font-weight:900;font-size:49.833px;fill:white;">NETW<tspan x="302.383px " y="47.161px ">O</tspan>RK</text>
+        </g>
+        <g transform="matrix(0.218296,0,0,0.218296,38.54349,80.978981)">
+            <g transform="matrix(26.617893,0,0,26.617893,488.321752,55.450621)">
+            </g>
+            <text x="32.198px" y="55.451px" style="font-family:'SpaceMono-Regular', 'Space Mono', monospace;font-size:26.618px;fill:white;">S O L U T I O N S  G R O U P</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,1)">
+            <rect x="15.224" y="88.817" width="25.714" height="2.466" style="fill:white;"/>
+        </g>
+    </g>
+</svg>

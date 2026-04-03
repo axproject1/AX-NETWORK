@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AX Network — Soluciones IT Profesionales en Panamá</title>
+  <meta name="description"
+    content="AX Network: soporte técnico, redes, seguridad y desarrollo web en Panamá. Soluciones IT claras, rápidas y medibles.">
+
+  <!-- Tipografía: Outfit y Fraunces -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fraunces:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet">
+
+  <!-- Dependencia: EmailJS para envío de correos desde el cliente -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- CSS Externo Refactorizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ══ NAVEGACIÓN (HEADER) ══ -->
+  <!-- Menú superior fijo con enlaces a las secciones principales y llamado a la acción. -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <!--
+        ══ LOGO DEL HEADER ══
+        Para usar TU logo:
+          1. Copia tu archivo de imagen dentro de la carpeta "axproo"
+          2. Cambia "logo.png" por el nombre exacto de tu archivo
+             (puede ser .png, .svg, .webp, .jpg, etc.)
+        El logo se muestra en blanco automáticamente con el filtro CSS.
+        Si no tienes logo aún, el texto "AX Network" se verá como respaldo.
+      -->
+      <img src="AX Network BLANCO S.svg" alt="AX Network Logo" class="nav-logo-img"
+        onerror="this.classList.add('nav-logo-img--hidden'); this.nextElementSibling.classList.remove('nav-logo-fallback--hidden');"><!-- Fallback de texto si la imagen no existe o no carga -->
+      <span class="nav-logo-fallback nav-logo-fallback--hidden">
+        <div class="nav-logo-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z" />
+          </svg>
+        </div>
+        <span class="nav-logo-text">AX<span> Network</span></span>
+      </span>
+    </a>
+
+    <!-- Enlaces de navegación -->
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- Acciones y Redes rápidas -->
+    <div class="nav-actions">
+      <span class="nav-phone">Llámanos: <strong>+507 6911-0901</strong></span>
+      <button class="btn btn-primary" onclick="wa()">
+        <!-- Icono de WhatsApp -->
+        <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.845L.057 23.879a.5.5 0 00.615.611l6.168-1.614A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.027-1.38l-.36-.214-3.732.977.998-3.645-.235-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z" />
+        </svg>
+        WhatsApp
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO (SECCIÓN PRINCIPAL) ══ -->
+  <!-- Pantalla inicial de impacto con título, botones call-to-action y estadísticas -->
+  <section id="hero">
+    <!-- Efectos de fondo del Hero -->
+    <div class="hero-bg-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="hero-inner">
+      <!-- Columna izquierda: Títulos y llamados a la acción -->
+      <div class="hero-left">
+        <div class="hero-badge"><span></span>Panamá · Soluciones IT Profesionales</div>
+        <h1 class="hero-title">
+          Tu empresa,<br>
+          <span class="grad">siempre conectada.</span>
+          <span class="italic">Resultados medibles.</span>
+        </h1>
+        <p class="hero-desc">Soporte técnico, redes, seguridad y desarrollo web para empresas, colegios e instituciones.
+          Atención rápida, sin complicaciones.</p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary"
+            onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+            <!-- Icono tipo clip/solicitud -->
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+            Solicitar cotización
+          </button>
+          <button class="btn btn-outline"
+            onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Ver servicios →</button>
+        </div>
+      </div>
+
+      <!-- Columna derecha: Tarjetas informativas/métricas -->
+      <div class="hero-right">
+        <div class="hero-stat-card">
+          <div class="stat-icon-wrap"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg></div>
+          <div>
+            <div class="stat-big">+60%</div>
+            <div class="stat-desc">Mejora de velocidad de red promedio</div>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-icon-wrap"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg></div>
+          <div>
+            <div class="stat-big">−40%</div>
+            <div class="stat-desc">Reducción de fallas en sistemas</div>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-icon-wrap"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg></div>
+          <div>
+            <div class="stat-big">&lt;24h</div>
+            <div class="stat-desc">Tiempo de respuesta garantizado</div>
+          </div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="stat-icon-wrap"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+            </svg></div>
+          <div>
+            <div class="stat-big">100+</div>
+            <div class="stat-desc">Clientes satisfechos en Panamá</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BARRA DESLIZANTE DE CLIENTES ══ -->
+  <!-- Banner animado infinito que muestra los tipos de negocio a los que atendemos -->
+  <div class="clients-strip">
+    <div class="clients-track">
+      <!-- El listado se duplica para lograr la animación ininterrumpida -->
+      <span class="client-logo">Empresas Privadas</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Colegios</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Instituciones Públicas</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Emprendedores</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Retail</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Salud</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Logística</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Empresas Privadas</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Colegios</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Instituciones Públicas</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Emprendedores</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Retail</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Salud</span>
+      <span class="client-logo">·</span>
+      <span class="client-logo">Logística</span>
+    </div>
+  </div>
+
+  <!-- ══ SERVICIOS (TABS) ══ -->
+  <!-- Sección interactiva que distribuye los servicios por área técnica -->
+  <div id="servicios" class="section reveal">
+    <div class="tag">Nuestros Servicios</div>
+    <div class="section-h">Todo lo que tu empresa<br>necesita en tecnología.</div>
+    <div class="section-sub">Desde soporte técnico hasta desarrollo web. Un solo partner IT para toda tu operación.
+    </div>
+
+    <!-- Botones de navegación (Tabs) -->
+    <div class="services-tabs">
+      <button class="stab active" onclick="showPanel('soporte',this)">Soporte Técnico</button>
+      <button class="stab" onclick="showPanel('redes',this)">Redes</button>
+      <button class="stab" onclick="showPanel('seguridad',this)">Seguridad</button>
+      <button class="stab" onclick="showPanel('web',this)">Desarrollo Web</button>
+    </div>
+
+    <div class="service-panels">
+      <!-- Panel 1: Soporte Técnico -->
+      <div class="panel active" id="panel-soporte">
+        <div class="srv-card">
+          <div class="srv-badge">Popular</div>
+          <img class="srv-img" src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80"
+            alt="Soporte técnico">
+          <div class="srv-body">
+            <h3>Diagnóstico y Reparación</h3>
+            <ul class="srv-items">
+              <li>Diagnóstico completo de hardware y software</li>
+              <li>Reparación de laptops, PCs y servidores</li>
+              <li>Recuperación de datos</li>
+              <li>Formateo e instalación de sistemas</li>
+            </ul>
+          </div>
+        </div>
+        <div class="srv-card">
+          <img class="srv-img" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80"
+            alt="Mantenimiento">
+          <div class="srv-body">
+            <h3>Mantenimiento y Optimización</h3>
+            <ul class="srv-items">
+              <li>Mantenimiento preventivo mensual</li>
+              <li>Limpieza física de equipos</li>
+              <li>Actualización de drivers y software</li>
+              <li>Optimización de rendimiento</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Redes -->
+      <div class="panel" id="panel-redes">
+        <div class="srv-card">
+          <div class="srv-badge">Especialidad</div>
+          <img class="srv-img" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="Redes">
+          <div class="srv-body">
+            <h3>Infraestructura de Red</h3>
+            <ul class="srv-items">
+              <li>Diseño e instalación LAN/WAN</li>
+              <li>Cableado estructurado certificado</li>
+              <li>Configuración de switches y routers</li>
+              <li>VPN empresarial</li>
+            </ul>
+          </div>
+        </div>
+        <div class="srv-card">
+          <img class="srv-img" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80" alt="WiFi">
+          <div class="srv-body">
+            <h3>WiFi Empresarial</h3>
+            <ul class="srv-items">
+              <li>Estudio de cobertura y señal</li>
+              <li>Instalación de access points</li>
+              <li>Redes WiFi segmentadas</li>
+              <li>Monitoreo 24/7</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Seguridad -->
+      <div class="panel" id="panel-seguridad">
+        <div class="srv-card">
+          <div class="srv-badge">Alta demanda</div>
+          <img class="srv-img" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80"
+            alt="Seguridad">
+          <div class="srv-body">
+            <h3>Vigilancia y CCTV</h3>
+            <ul class="srv-items">
+              <li>Instalación de cámaras IP y analógicas</li>
+              <li>DVR/NVR con acceso remoto</li>
+              <li>Control de acceso biométrico</li>
+              <li>Alarmas y sensores</li>
+            </ul>
+          </div>
+        </div>
+        <div class="srv-card">
+          <img class="srv-img" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80"
+            alt="Cyberseguridad">
+          <div class="srv-body">
+            <h3>Ciberseguridad</h3>
+            <ul class="srv-items">
+              <li>Antivirus y EDR empresarial</li>
+              <li>Firewall y filtrado de contenido</li>
+              <li>Backups automáticos en nube</li>
+              <li>Auditorías de seguridad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4: Desarrollo Web -->
+      <div class="panel" id="panel-web">
+        <div class="srv-card">
+          <div class="srv-badge">Nuevo</div>
+          <img class="srv-img" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80" alt="Web">
+          <div class="srv-body">
+            <h3>Sitios Web Profesionales</h3>
+            <ul class="srv-items">
+              <li>Landing pages y sitios corporativos</li>
+              <li>Tiendas online (eCommerce)</li>
+              <li>Diseño responsive y moderno</li>
+              <li>Optimización SEO</li>
+            </ul>
+          </div>
+        </div>
+        <div class="srv-card">
+          <img class="srv-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+            alt="Sistemas">
+          <div class="srv-body">
+            <h3>Sistemas y Aplicaciones</h3>
+            <ul class="srv-items">
+              <li>Sistemas de gestión internos</li>
+              <li>Dashboards y reportes</li>
+              <li>Integraciones API</li>
+              <li>Mantenimiento y soporte web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="fade">
+
+  <!-- ══ RESULTADOS (CASOS DE ÉXITO) ══ -->
+  <!-- Presentación de logros y estadísticas de clientes -->
+  <div id="resultados" class="section reveal">
+    <div class="tag">Casos de Éxito</div>
+    <div class="section-h">Resultados reales,<br>no promesas.</div>
+    <div class="section-sub">Cada proyecto entregado con métricas medibles y documentadas.</div>
+    <div class="results-grid">
+      <!-- Carta 1 -->
+      <div class="result-card">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" alt="Empresa"
+          class="result-img result-img--muted">
+        <div class="pct">+60%</div>
+        <h4>Red empresarial optimizada</h4>
+        <p>Empresa en Ciudad de Panamá logró 60% de mejora en velocidad de red tras rediseño completo de
+          infraestructura.</p>
+      </div>
+      <!-- Carta 2 -->
+      <div class="result-card">
+        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=80" alt="Colegio"
+          class="result-img result-img--muted">
+        <div class="pct">−40%</div>
+        <h4>Menos fallas en colegio</h4>
+        <p>Centro educativo eliminó el 40% de interrupciones en sus sistemas mediante mantenimiento preventivo continuo.
+        </p>
+      </div>
+      <!-- Carta 3 -->
+      <div class="result-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&q=80" alt="Seguridad"
+          class="result-img result-img--muted">
+        <div class="pct">100%</div>
+        <h4>Cobertura de seguridad</h4>
+        <p>Institución pública implementó sistema CCTV completo con monitoreo remoto y control de acceso integrado.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ POR QUÉ NOSOTROS (NOSOTROS) ══ -->
+  <!-- Muestra el porqué de la elección, con íconos e imagen representativa -->
+  <div id="nosotros" class="section-full reveal">
+    <div class="inner">
+      <div class="why-grid">
+
+        <!-- Lado izquierdo: Imagen y credencial -->
+        <div class="why-img-wrap reveal-left">
+          <img class="why-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80"
+            alt="Equipo AX Network">
+          <div class="why-img-badge">
+            <div class="num">5+ años</div>
+            <div class="lbl">de experiencia en Panamá</div>
+          </div>
+        </div>
+
+        <!-- Lado derecho: Puntos clave -->
+        <div class="reveal-right">
+          <div class="tag">Por qué elegir AX Network</div>
+          <div class="section-h section-h--nosotros">Más que soporte,<br>un socio tecnológico.</div>
+          <p class="nosotros-desc">No somos una empresa masiva con tickets sin respuesta. Somos un equipo especializado
+            que trata cada cliente con atención directa y seguimiento real.</p>
+
+          <div class="why-list">
+            <!-- Punto 1 -->
+            <div class="why-item">
+              <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg></div>
+              <div>
+                <h4>Respuesta en menos de 24 horas</h4>
+                <p>Atendemos emergencias el mismo día. Tu operación no puede esperar.</p>
+              </div>
+            </div>
+            <!-- Punto 2 -->
+            <div class="why-item">
+              <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                </svg></div>
+              <div>
+                <h4>Diagnóstico inicial gratuito</h4>
+                <p>Evaluamos tu infraestructura sin costo. Sabes exactamente qué necesitas antes de decidir.</p>
+              </div>
+            </div>
+            <!-- Punto 3 -->
+            <div class="why-item">
+              <div class="why-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg></div>
+              <div>
+                <h4>Servicio en sitio en Panamá</h4>
+                <p>Técnicos presenciales en Ciudad de Panamá y área metropolitana. También atendemos de forma remota.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ GALERÍA ══ -->
+  <!-- Cuadrícula con imágenes que muestran trabajos pasados -->
+  <div id="galeria" class="section reveal">
+    <div class="tag">Galería de Proyectos</div>
+    <div class="section-h section-h--galeria">Nuestro trabajo<br>en imágenes.</div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+          alt="Infraestructura de red"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=400&q=80"
+          alt="Soporte técnico"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&q=80"
+          alt="Seguridad"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80"
+          alt="Redes"></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80"
+          alt="Desarrollo web"></div>
+    </div>
+  </div>
+
+  <hr class="fade">
+
+  <!-- ══ CONTACTO Y FORMULARIO ══ -->
+  <!-- Información de contacto directa y formulario web para captación de clientes -->
+  <div id="contacto" class="section reveal">
+    <div class="tag">Contacto</div>
+    <div class="section-h section-h--contacto">¿Listo para empezar?<br>Escríbenos hoy.</div>
+    <p class="contacto-desc">Respuesta garantizada en menos de 24 horas. Sin costo por consulta inicial.</p>
+
+    <div class="contact-grid">
+      <!-- Información a la izquierda -->
+      <div>
+        <div class="contact-info-block">
+          <div class="cinfo">
+            <div class="cinfo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg></div>
+            <div>
+              <div class="cinfo-lbl">Teléfono / WhatsApp</div>
+              <div class="cinfo-val">+507 6911-0901</div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg></div>
+            <div>
+              <div class="cinfo-lbl">Correo electrónico</div>
+              <div class="cinfo-val">ax.studios01@gmail.com</div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg></div>
+            <div>
+              <div class="cinfo-lbl">Horario de atención</div>
+              <div class="cinfo-val">Lun – Sáb · 8:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+          <div class="cinfo">
+            <div class="cinfo-icon"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg></div>
+            <div>
+              <div class="cinfo-lbl">Ubicación</div>
+              <div class="cinfo-val">Ciudad de Panamá, República de Panamá</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action secundario directo a WhatsApp -->
+        <button class="wa-btn-big" onclick="wa()">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.845L.057 23.879a.5.5 0 00.615.611l6.168-1.614A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.027-1.38l-.36-.214-3.732.977.998-3.645-.235-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z" />
+          </svg>
+          Contactar por WhatsApp
+        </button>
+      </div>
+
+      <!-- Formulario de Contacto (Procesa mediante JavaScript / EmailJS) -->
+      <div class="contact-form-wrap">
+        <h3>Envíanos un mensaje</h3>
+        <p>Te responderemos a tu correo en menos de 24 horas.</p>
+        <form id="contactForm" onsubmit="sendEmail(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-name">Nombre *</label>
+              <input id="input-name" type="text" name="from_name" placeholder="Tu nombre completo" required>
+            </div>
+            <div class="form-group">
+              <label for="input-phone">Teléfono</label>
+              <input id="input-phone" type="tel" name="phone" placeholder="+507 0000-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-email">Correo electrónico *</label>
+            <input id="input-email" type="email" name="reply_to" placeholder="tu@empresa.com" required>
+          </div>
+          <div class="form-group">
+            <label for="input-company">Empresa / Organización</label>
+            <input id="input-company" type="text" name="company" placeholder="Nombre de tu empresa">
+          </div>
+          <div class="form-group">
+            <label for="input-service">Servicio de interés *</label>
+            <select id="input-service" name="service" title="Seleccione el servicio de su interés" required>
+              <option value="" disabled selected>Seleccionar servicio...</option>
+              <option value="Soporte Técnico">Soporte Técnico</option>
+              <option value="Redes e Infraestructura">Redes e Infraestructura</option>
+              <option value="Seguridad / CCTV">Seguridad / CCTV</option>
+              <option value="Desarrollo Web">Desarrollo Web</option>
+              <option value="Consultoría IT">Consultoría IT</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="input-message">Mensaje *</label>
+            <textarea id="input-message" name="message" placeholder="Describe brevemente tu necesidad o problema..."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+            </svg>
+            Enviar mensaje
+          </button>
+
+          <!-- Mensaje de Feedback (exito o error) al enviar formulario -->
+          <div id="formMsg" class="form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER (PIÉ DE PÁGINA) ══ -->
+  <footer>
+    <div class="footer-top">
+      <!-- Branding e info en Footer -->
+      <div class="footer-brand">
+        <!-- Logo imagen en el footer -->
+        <img src="AX Network BLANCO S.svg" alt="AX Network Logo" class="footer-logo-img"
+          onerror="this.classList.add('footer-logo-img--hidden'); this.nextElementSibling.classList.remove('footer-logo-fallback--hidden');">
+        <div class="nav-logo-text footer-logo footer-logo-fallback--hidden">AX<span class="footer-logo-accent"> Network</span></div>
+        <p>Soluciones IT profesionales en Panamá. Soporte técnico, redes, seguridad y desarrollo web para empresas que
+          exigen resultados.</p>
+      </div>
+
+      <!-- Enlaces directos Servicios -->
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Soporte Técnico</a></li>
+          <li><a href="#servicios">Redes</a></li>
+          <li><a href="#servicios">Seguridad</a></li>
+          <li><a href="#servicios">Desarrollo Web</a></li>
+        </ul>
+      </div>
+
+      <!-- Enlaces directos Empresa -->
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#resultados">Casos de éxito</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Info de Contacto -->
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="tel:+50769110901">+507 6911-0901</a></li>
+          <li><a href="mailto:ax.studios01@gmail.com">ax.studios01@gmail.com</a></li>
+          <li><a href="#">Ciudad de Panamá</a></li>
+          <li><a href="#">Lun–Sáb 8am–6pm</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 AX Network · Todos los derechos reservados · Ciudad de Panamá, Panamá</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/50769110901" class="social-icon" target="_blank" rel="noopener noreferrer"
+          title="Contactar por WhatsApp" aria-label="WhatsApp AX Network">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.845L.057 23.879a.5.5 0 00.615.611l6.168-1.614A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 01-5.027-1.38l-.36-.214-3.732.977.998-3.645-.235-.374A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z" />
+          </svg>
+        </a>
+        <a href="mailto:ax.studios01@gmail.com" class="social-icon" title="Enviar correo a AX Network"
+          aria-label="Email AX Network">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ WIDGET DE CHAT (BOT BÁSICO) ══ -->
+  <div id="chat-widget">
+    <div class="chat-box" id="chatBox">
+      <div class="chat-header">
+        <div class="chat-avatar"><svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+          </svg></div>
+        <div class="chat-header-info">
+          <h4>AX Network</h4>
+          <p>Soporte en línea</p>
+        </div>
+        <div class="chat-status"></div>
+      </div>
+
+      <!-- Historial de mensajes -->
+      <div class="chat-messages" id="chatMessages">
+        <div class="msg bot">¡Hola! 👋 Soy el asistente de <strong>AX Network</strong>. ¿En qué puedo ayudarte hoy?
+        </div>
+      </div>
+
+      <!-- Respuestas rápidas sugeridas -->
+      <div class="chat-quick" id="quickReplies">
+        <button class="qbtn" onclick="quickSend('Necesito soporte técnico')">💻 Soporte técnico</button>
+        <button class="qbtn" onclick="quickSend('Quiero información sobre redes')">📡 Redes</button>
+        <button class="qbtn" onclick="quickSend('Me interesa seguridad / CCTV')">📷 Seguridad</button>
+        <button class="qbtn" onclick="quickSend('Quiero una cotización')">💰 Cotización</button>
+      </div>
+
+      <!-- Input para enviar un mensaje -->
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Escribe tu mensaje..."
+          onkeydown="if(event.key==='Enter')sendChat()">
+        <button class="chat-send" onclick="sendChat()" aria-label="Enviar mensaje" title="Enviar mensaje">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Burbuja para abrir el chat -->
+    <button class="chat-bubble" onclick="toggleChat()">
+      <div class="chat-notif" id="chatNotif">1</div>
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Lógica principal extraída -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
